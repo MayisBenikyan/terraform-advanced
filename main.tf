@@ -12,6 +12,7 @@ module "ec2_public" {
   security_group_id = module.vpc.security_group_id
   public_subnet_id  = module.vpc.public_subnet_id
   key_name = "server-key"
+  name = "Public Ubuntu Server"
 }
 
 module "ec2_private" {
@@ -21,4 +22,5 @@ module "ec2_private" {
   security_group_id = module.vpc.security_group_id
   private_subnet_id = module.vpc.private_subnet_id
   key_name = "server-key"
+  name = "Private Ubuntu Server"
 }

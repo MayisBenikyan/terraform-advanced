@@ -6,8 +6,8 @@ resource "aws_vpc" "my-vpc" {
 }
 
 resource "aws_security_group" "ec2_sg" {
-  name        = "allow_http_access"
-  description = "Allow HTTP access"
+  name        = "allow_http_ssh_access"
+  description = "Allow HTTP SSH access"
   vpc_id      = aws_vpc.my-vpc.id
 
   dynamic ingress {

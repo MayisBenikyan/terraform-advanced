@@ -4,4 +4,7 @@ resource "aws_instance" "ec2-private-instance" {
   vpc_security_group_ids = [var.security_group_id]
   subnet_id     = var.private_subnet_id
   key_name = var.key_name
+  tags = {
+    "Name" = var.name
+  }
 }
