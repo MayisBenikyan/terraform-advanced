@@ -2,7 +2,9 @@ module "vpc" {
   source     = "./modules/vpc"
   vpc_cidr = "10.10.0.0/16"
   public_subnet_cidr = "10.10.0.0/24"
+  public_subnet_name = "Public Subnet"
   private_subnet_cidr = "10.10.1.0/24"
+  private_subnet_name = "Private Subnet"
 }
 
 module "ec2_public" {
